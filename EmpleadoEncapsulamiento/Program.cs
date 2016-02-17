@@ -13,13 +13,20 @@ namespace EmpleadoEncapsulamiento
             Console.WriteLine("***** Demostración del encapsulamiento *****");
 
             // Crear objetos de tipo Empleado
-            Empleado empleado = new Empleado("Marvin");
+            Empleado empleado = new Empleado("Marvin", 123, 10000, 23);
 
             // Demostración con métodos Accessor/Mutator
             // Console.WriteLine("El nombre del empleado es {0}", empleado.GetNombre());
 
             // Propiedades .NET
-            Console.WriteLine("El nombre del empleado es {0}", empleado.Nombre);
+            // Console.WriteLine("El nombre del empleado es {0}", empleado.Nombre);
+
+            empleado.DesplegarEstado();
+
+            // Darle un bono al empleado accediendo a la variable miembro
+            // a través de un método
+            empleado.DarBono(1200);
+            empleado.DesplegarEstado();
 
             Empleado otroEmpleado = new Empleado();
             // otroEmpleado.SetNombre("María");
